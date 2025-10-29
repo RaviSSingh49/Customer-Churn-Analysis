@@ -1,16 +1,11 @@
 
 # 📦 Customer-Churn-Analysis
 
-A complete **end-to-end data science project** to analyze customer churn using **SQL Server**, **Power BI**, and **Machine Learning**.  
+A complete **end-to-end data science project** to analyze customer churn using **SQL Server**, **Power BI**.  
 This solution covers:
 
 - **ETL** in **Microsoft SQL Server**
 - **Dashboarding** in **Power BI**
-- **Exploratory Data Analysis (EDA)** using Python
-- **Predictive Modeling** using:
-  1. **XGBoost Classifier**
-  2. **Random Forest Classifier**
-  3. **Decision Tree Classifier**
 
 ---
 
@@ -19,8 +14,6 @@ This solution covers:
 **Customer churn** is a major concern in the **telecom industry**. This project analyzes churn patterns, identifies key drivers, predicts future churners, and profiles at-risk customers using:
 
 - A **summary dashboard**
-- A **prediction report**
-- A trained **machine learning model**
 
 ---
 
@@ -37,8 +30,6 @@ This solution covers:
 
 2. **Profile churners** and identify focus areas for **marketing campaigns**.
 
-3. **Predict future churners** using a machine learning model.
-
 ### 📊 Metrics Used:
 
 - **Total Customers**  
@@ -48,24 +39,12 @@ This solution covers:
 
 ---
 
-## 🧰 Tech Stack
-
-| Component         | Tools & Libraries                                      |
-|------------------|--------------------------------------------------------|
-| **Database**      | Microsoft SQL Server                                   |
-| **Data Analysis** | Python (`pandas`, `matplotlib`, `seaborn`)             |
-| **Dashboarding**  | Power BI                                               |
-| **ML Modeling**   | `scikit-learn`, `xgboost`, `imbalanced-learn`, `pickle` |
-| **Notebook**      | Jupyter Notebook                                       |
-
----
-
 ## 🔄 Workflow
 
 ### 0️⃣ Dataset Overview
 
 <p align="center">
-  <img src="Image/Customer Churn Data.jpg" alt="Dataset Overview" width="600">
+  <img src="Customer Churn Data.jpg" alt="Dataset Overview" width="600">
 </p>
 
 **Dataset Columns Grouped Into:**
@@ -120,15 +99,9 @@ Count Predicted Churner = COUNT(Predictions[Customer_ID]) + 0
 
 ### 📌 Summary Page
 <p align="center">
-  <img src="Image/Summary_Page.png" alt="Summary Page" width="600">
+  <img src="Summary_Page.png" alt="Summary Page" width="600">
 </p>
 
-### 📌 Prediction Page
-<p align="center">
-  <img src="Image/Prediction_Page.png" alt="Prediction Page" width="600">
-</p>
-
----
 
 ## 🔍 Key Insights (from Summary Page)
 
@@ -136,37 +109,6 @@ Count Predicted Churner = COUNT(Predictions[Customer_ID]) + 0
 - **Short Tenure Churn**: Users with < 2 months tenure are more likely to churn. In contrast, users with **1-year or 2-year contracts** show much lower churn.
 - **Gender Disparity**: **Female customers churn more** than male customers.
 - **Service-Based Churn**: Users with **Phone, Internet, and Unlimited Data** services show **60%+ churn rate**.
-
----
-
-## 🧠 Machine Learning Module — *Churn Prediction*
-
-This Jupyter notebook builds and evaluates ML models to **predict churn**, enabling targeted retention strategies.
-
-### 📌 Key Features
-
-#### 🔧 Data Preprocessing:
-- Removed non-informative columns (e.g., `customerID`)
-- Handled missing values in `TotalCharges`
-- Encoded categorical variables using **LabelEncoder**
-
-#### ⚖️ Class Imbalance Handling:
-- Applied **SMOTE** (Synthetic Minority Oversampling Technique)
-
-#### 🏗️ Model Building:
-- Implemented:
-  - **Decision Tree Classifier**
-  - **Random Forest Classifier**
-  - **XGBoost Classifier**
-
-#### 📊 Model Evaluation:
-- **Accuracy Score**
-- **Confusion Matrix**
-- **Classification Report** *(Precision, Recall, F1-score)*
-
-#### 💾 Output:
-- Exported predictions to `.csv` for Power BI visualization
-- Saved trained model using `pickle` for future use
 
 ---
 
