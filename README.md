@@ -114,6 +114,5 @@ Count Predicted Churner = COUNT(Predictions[Customer_ID]) + 0
 
 ## 📈 Results
 
-- Built a robust **ML pipeline ready for deployment**
 - Delivered actionable **churn insights**
 - Provided data-driven inputs for **retention strategies**
